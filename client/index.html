@@ -27,11 +27,17 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-      <p>Rooms: <select></select></p>
+      <p>Rooms: <select id="rooms"></select><button type="button" id="roomSubmit">Create new room</button><input type="text" id="newRoom"></p>
+      <button type="button" id="refresh">Load new messages</button>
       <form>
         <input type="text" id="newMessage"><button type="button" id="messageSubmit">Submit Message</button>
       </form>
     </div>
     <div id="chats"></div>
+    <script>
+      $(function() {
+        app.init();
+      });
+    </script>
   </body>
 </html>
