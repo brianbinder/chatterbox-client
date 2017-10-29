@@ -85,5 +85,6 @@ form input[type=text] {
 
 .friend {
     font-weight: bold;
+    font-color: red;
 }
 

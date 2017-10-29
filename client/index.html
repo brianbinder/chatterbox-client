@@ -8,7 +8,6 @@
     <!-- dependencies -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/DOMPurify/dist/purify.min.js"></script>
     <script>
       // YOU DO NOT NEED TO EDIT THIS CODE
       if (!/(&|\?)username=/.test(window.location.search)) {
@@ -27,10 +26,11 @@
   <body>
     <div id="main">
       <h1>chatterbox</h1>
-      <p>Rooms: <select id="rooms"></select><button type="button" id="roomSubmit">Create new room</button><input type="text" id="newRoom"></p>
+      <p>Rooms: <select id="roomSelect"></select><button type="button" id="roomSubmit">Create new room</button><input type="text" id="newRoom"></p>
       <button type="button" id="refresh">Load new messages</button>
-      <form>
-        <input type="text" id="newMessage"><button type="button" id="messageSubmit">Submit Message</button>
+      <form action="#" id="send" method="post">
+        <input type="text" name="message" id="message">
+        <input type="submit" name="submit" class="submit"/>
       </form>
     </div>
     <div id="chats"></div>
